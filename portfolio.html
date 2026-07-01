@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Content Creation, Motion, Brand & UI/UX Projects | Aramana</title>
+<meta name="description" content="Browse Aramana's full portfolio: 50+ projects across content creation, social media reels, brand identity, UI/UX design and motion graphics for brands like Ola Electric, Matter Motor Works and more.">
+<meta name="keywords" content="creative portfolio, content creation examples, motion design portfolio, brand identity work, UI/UX case studies, Aramana projects">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.aramana.in/portfolio.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.aramana.in/portfolio.html">
+<meta property="og:site_name" content="Aramana Creative Studio">
+<meta property="og:title" content="Portfolio — Aramana Creative Studio">
+<meta property="og:description" content="50+ projects across content creation, motion, brand identity and UI/UX design.">
+<meta property="og:image" content="https://www.aramana.in/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Aramana Portfolio",
+  "url": "https://www.aramana.in/portfolio.html",
+  "isPartOf": {"@id": "https://www.aramana.in/#website"},
+  "about": {"@id": "https://www.aramana.in/#organization"},
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.aramana.in/"},
+      {"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.aramana.in/portfolio.html"}
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://db.onlinewebfonts.com/c/8b75d9dcff6a48c35a46656192adf019?family=FSP+DEMO+-+PODIUM+Sharp+4.11" rel="stylesheet">
+<style>
+/* ── RESET ── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;-webkit-font-smoothing:antialiased;font-family:'Space Mono',monospace;scrollbar-width:none;-ms-overflow-style:none;}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0;}
+img,video{display:block;}a{text-decoration:none;color:inherit;}button{font-family:inherit;cursor:pointer;}
+
+/* ── THEMES ── */
+:root{
+  --ink:#fdf3dc;--ink2:rgba(253,243,220,.68);--ink3:rgba(253,243,220,.4);
+  --bg:#081832;--bg2:#0e2445;--rule:rgba(253,243,220,.1);
+  --gold:#F0A93B;--blue:#3b7bc4;
+}
+body{background:var(--bg);color:var(--ink);}
+
+/* ── LIQUID GLASS ── */
+.lg{
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.12);
+  position:relative;overflow:hidden;
+}
+.lg::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
+  background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.12) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,.12) 75%,rgba(255,255,255,.45) 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1rem 1.5rem;opacity:0;transition:opacity .7s;}
+nav.show{opacity:1;}
+.nav-pill{
+  max-width:1000px;margin:0 auto;border-radius:100px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.65rem 1rem .65rem 1.5rem;
+  background:rgba(8,20,42,.8);
+  backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+  border:1px solid rgba(253,243,220,.28);
+  box-shadow:0 2px 32px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08);
+  position:relative;
+  transition:width .7s cubic-bezier(.4,0,.2,1),height .7s cubic-bezier(.4,0,.2,1),padding .6s cubic-bezier(.4,0,.2,1),border-radius .6s;
+}
+.nav-dot{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--gold);opacity:0;pointer-events:none;transition:opacity .25s .3s;}
+.nav-dot svg{width:18px;height:18px;}
+nav.shrink #navPill{
+  position:absolute;top:1rem;left:1.5rem;
+  width:52px;height:52px;padding:0;overflow:hidden;justify-content:center;
+}
+nav.shrink #navPill .nav-l,nav.shrink #navPill .nav-r{opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap;}
+nav.shrink #navPill .nav-dot{opacity:1;}
+nav.shrink #navPill:hover{width:auto;max-width:1000px;height:auto;padding:.65rem 1rem .65rem 1.5rem;overflow:visible;}
+nav.shrink #navPill:hover .nav-l,nav.shrink #navPill:hover .nav-r{opacity:1;pointer-events:auto;transition:opacity .4s .25s;}
+nav.shrink #navPill:hover .nav-dot{opacity:0;transition:opacity .1s;}
+@media(max-width:699px){
+  nav.shrink #navPill{position:static;transform:none;width:auto;height:auto;padding:.65rem 1rem .65rem 1.5rem;overflow:visible;}
+  nav.shrink #navPill .nav-l,nav.shrink #navPill .nav-r{opacity:1;pointer-events:auto;}
+  nav.shrink #navPill .nav-dot{display:none;}
+}
+.nav-l{display:flex;align-items:center;gap:0;}
+.nav-logo-wrap{display:flex;align-items:center;gap:9px;margin-right:1.5rem;text-decoration:none;}
+.nav-logo-icon{width:19px;height:19px;flex-shrink:0;fill:#fff;transition:fill .2s;}
+.nav-logo-text{font-size:.95rem;font-weight:700;letter-spacing:-.01em;color:#fff;transition:color .2s;}
+.nav-links-desk{display:none;align-items:center;gap:1.6rem;}
+@media(min-width:700px){.nav-links-desk{display:flex;}}
+.nav-lnk{font-size:.8rem;color:rgba(253,243,220,.88);background:none;border:none;padding:0;transition:color .2s;}
+.nav-lnk:hover{color:var(--gold);}
+.nav-r{display:flex;align-items:center;gap:.6rem;}
+.nav-cta{
+  height:38px;padding:0 1.3rem;border-radius:100px;border:none;
+  background:var(--gold);color:#0e1e3a;font-size:.78rem;font-weight:700;letter-spacing:.02em;
+  transition:background .2s,transform .15s;
+}
+.nav-cta:hover{background:#ffbf5c;transform:scale(1.03);}
+/* mobile */
+.mob-hbg{
+  display:none;flex-direction:column;gap:5px;padding:.52rem;
+  background:rgba(253,243,220,.16);border:1px solid rgba(253,243,220,.3);border-radius:8px;
+}
+.mob-hbg span{display:block;width:17px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .25s;}
+.mob-hbg.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.mob-hbg.open span:nth-child(2){opacity:0;}
+.mob-hbg.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+@media(max-width:699px){.nav-links-desk,.nav-cta-desk{display:none!important;}.mob-hbg{display:flex;}}
+
+/* mob drawer */
+.mob-drawer{display:none;position:fixed;inset:0;z-index:250;background:rgba(6,16,34,.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.mob-drawer.open{display:flex;}
+.mob-draw-lnk{font-family:'Instrument Serif',serif;font-size:clamp(2rem,7vw,3rem);color:var(--ink);background:none;border:none;font-style:italic;}
+.mob-draw-lnk:hover{color:var(--gold);}
+.mob-draw-cta{background:var(--gold);color:#0e1e3a;border:none;border-radius:100px;padding:.75rem 2.5rem;font-size:.88rem;font-weight:700;margin-top:.5rem;}
+
+/* ── HERO ── */
+.font-podium{font-family:"FSP DEMO - PODIUM Sharp 4.11",'Instrument Serif',serif;}
+.font-inter{font-family:'Inter',sans-serif;}
+#hero{height:100vh;height:100dvh;height:calc(var(--vh,1vh)*100);position:relative;display:flex;flex-direction:column;overflow:hidden;background:#000;flex-shrink:0;}
+#hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+.hero-dark{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.5) 0%,rgba(0,0,0,.25) 40%,rgba(0,0,0,.65) 100%);}
+.hero-content{
+  position:relative;z-index:10;flex:1;width:100%;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  padding:7rem 1.5rem 3rem;
+}
+@media(min-width:640px){.hero-content{padding:7rem 2.5rem 3rem;}}
+@media(min-width:1024px){.hero-content{padding:7rem 4rem 3rem;}}
+.hero-content-inner{max-width:1080px;width:100%;margin:0 auto;}
+.hero-tag{display:flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1.5rem;}
+@media(min-width:640px){.hero-tag{font-size:.82rem;margin-bottom:2rem;}}
+.hero-tag svg{width:16px;height:16px;flex-shrink:0;}
+.hero-h1{color:#fff;line-height:.92;letter-spacing:-.02em;text-transform:uppercase;font-size:clamp(2.8rem,8vw,7rem);}
+.hero-sub{
+  color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.7;max-width:420px;
+  margin-top:1.5rem;font-family:'Inter',sans-serif;
+}
+@media(min-width:640px){.hero-sub{font-size:1rem;margin-top:2rem;}}
+.hero-sub strong{color:#fff!important;}
+.hero-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;margin-top:2rem;}
+@media(min-width:1024px){.hero-cta-row{margin-top:2.5rem;gap:1.5rem;}}
+.hero-btn-primary{
+  display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:#0e1e3a;border:none;
+  padding:.85rem 1.4rem;font-family:'Inter',sans-serif;font-weight:700;font-size:.68rem;
+  letter-spacing:.16em;text-transform:uppercase;border-radius:100px;transition:background .2s,transform .15s;
+}
+@media(min-width:640px){.hero-btn-primary{padding:1rem 1.8rem;font-size:.72rem;}}
+.hero-btn-primary:hover{background:#ffbf5c;transform:scale(1.03);}
+.hero-btn-primary svg{width:15px;height:15px;transition:transform .2s;}
+.hero-btn-primary:hover svg{transform:translate(2px,-2px);}
+.hero-badge{display:none;align-items:center;gap:.7rem;}
+@media(min-width:640px){.hero-badge{display:flex;}}
+.hero-badge svg{width:28px;height:28px;color:rgba(255,255,255,.5);flex-shrink:0;}
+.hero-badge-txt{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);line-height:1.5;font-family:'Inter',sans-serif;}
+.hero-stats{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.5rem;}
+@media(min-width:640px){.hero-stats{gap:3rem;margin-top:3rem;}}
+@media(min-width:1024px){.hero-stats{gap:4rem;margin-top:3.5rem;}}
+.hero-stat-val{color:#fff;font-weight:700;font-size:clamp(1.6rem,4vw,3rem);letter-spacing:-.02em;font-family:'Inter',sans-serif;}
+.hero-stat-lbl{color:rgba(255,255,255,.5);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.3rem;font-family:'Inter',sans-serif;}
+
+
+/* fade-up animations */
+@keyframes fade-up{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.animate-fade-up{opacity:0;animation:fade-up .8s ease-out forwards;}
+.animate-fade-up-delay-1{opacity:0;animation:fade-up .8s ease-out .2s forwards;}
+.animate-fade-up-delay-2{opacity:0;animation:fade-up .8s ease-out .4s forwards;}
+.animate-fade-up-delay-3{opacity:0;animation:fade-up .8s ease-out .6s forwards;}
+.animate-fade-up-delay-4{opacity:0;animation:fade-up .8s ease-out .8s forwards;}
+
+/* ── MARQUEE ── */
+.marq-wrap{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.8rem 0;overflow:hidden;position:relative;background:var(--bg);}
+.marq-wrap::before,.marq-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;}
+.marq-wrap::before{left:0;background:linear-gradient(to right,var(--bg),transparent);}
+.marq-wrap::after{right:0;background:linear-gradient(to left,var(--bg),transparent);}
+.marq-inner{display:flex;width:max-content;}
+.marq-track{display:flex;align-items:center;gap:3rem;flex-shrink:0;padding-right:3rem;}
+.m-item{font-size:10px;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;}
+.m-item b{color:var(--gold);margin-right:5px;font-weight:400;}
+
+/* ── ABOUT ── */
+#about{background:var(--bg);padding:clamp(5rem,12vh,9rem) 1.5rem clamp(3rem,6vh,5rem);overflow:hidden;}
+.about-inner{max-width:1080px;margin:0 auto;}
+.about-lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.2rem;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;}
+.about-lbl.rv{opacity:1;transform:translateY(0);}
+.about-h2{font-family:'Instrument Serif',serif;font-size:clamp(2.2rem,6.5vw,5.5rem);color:var(--ink);line-height:1.12;letter-spacing:-.02em;max-width:900px;opacity:0;transform:translateY(40px);transition:opacity .8s .1s,transform .8s .1s;}
+.about-h2 em{font-style:italic;color:var(--ink2);}
+.about-h2.rv{opacity:1;transform:translateY(0);}
+
+/* ── FEATURED VIDEO ── */
+#featured{background:var(--bg);padding:1.5rem 1.5rem clamp(3rem,8vh,6rem);}
+.feat-inner{max-width:1080px;margin:0 auto;}
+.feat-card{border-radius:24px;overflow:hidden;aspect-ratio:16/9;position:relative;opacity:0;transform:translateY(50px);transition:opacity .9s,transform .9s;}
+.feat-card.rv{opacity:1;transform:translateY(0);}
+.feat-card video{width:100%;height:100%;object-fit:cover;}
+.feat-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%);}
+.feat-overlay{
+  position:absolute;bottom:0;left:0;right:0;padding:1.5rem 2rem;display:flex;flex-direction:column;gap:1rem;
+  background-image:linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 60%,transparent 100%),url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1200');
+  background-size:cover;background-position:center;
+}
+@media(min-width:640px){.feat-overlay{flex-direction:row;align-items:flex-end;justify-content:space-between;}}
+.feat-glass{border-radius:16px;padding:1.2rem 1.5rem;max-width:400px;}
+.feat-tag{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem;}
+.feat-body{font-size:.78rem;line-height:1.78;color:rgba(255,255,255,.78);}
+.feat-btn{border-radius:100px;padding:.65rem 1.8rem;font-size:.78rem;color:#fff;background:none;border:none;white-space:nowrap;transition:transform .2s;}
+.feat-btn:hover{transform:scale(1.05);}
+
+/* ── STATS ── */
+#stats{background:var(--bg);padding:clamp(4rem,8vh,6rem) 1.5rem;border-top:1px solid var(--rule);}
+.stats-inner{max-width:1000px;margin:0 auto;}
+.stats-lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-align:center;margin-bottom:3rem;opacity:0;transition:opacity 1s;}
+.stats-lbl.rv{opacity:1;}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center;}
+@media(max-width:560px){.stats-grid{grid-template-columns:1fr;gap:3rem;}}
+.stat-val{font-family:'Instrument Serif',serif;font-size:clamp(52px,10vw,92px);line-height:1;letter-spacing:-.04em;color:var(--ink);opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s;}
+.stat-val.rv{opacity:1;transform:translateY(0);}
+.stat-lbl{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-top:.7rem;}
+
+/* ── PHILOSOPHY ── */
+#philosophy{background:var(--bg);padding:clamp(5rem,12vh,9rem) 1.5rem;overflow:hidden;}
+.phil-inner{max-width:1080px;margin:0 auto;}
+.phil-h2{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,7.5vw,6rem);color:var(--ink);line-height:1;letter-spacing:-.025em;margin-bottom:3.5rem;opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s;}
+.phil-h2 em{font-style:italic;color:var(--ink3);}
+.phil-h2.rv{opacity:1;transform:translateY(0);}
+.phil-grid{display:grid;grid-template-columns:1fr;gap:2rem;}
+@media(min-width:700px){.phil-grid{grid-template-columns:1fr 1fr;}}
+.phil-img-wrap{border-radius:24px;overflow:hidden;aspect-ratio:4/3;opacity:0;transform:translateX(-40px);transition:opacity .8s .1s,transform .8s .1s;}
+.phil-img-wrap.rv{opacity:1;transform:translateX(0);}
+.phil-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:20% 70%;filter:brightness(.82) saturate(1.15);}
+.phil-right{display:flex;flex-direction:column;gap:2rem;opacity:0;transform:translateX(40px);transition:opacity .8s .15s,transform .8s .15s;}
+.phil-right.rv{opacity:1;transform:translateX(0);}
+.phil-block+.phil-block{border-top:1px solid var(--rule);padding-top:1.5rem;}
+.phil-lbl{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:.9rem;}
+.phil-txt{font-size:.8rem;line-height:1.82;color:var(--ink2);}
+
+/* ── SERVICES DISCIPLINES ── */
+#services{background:var(--bg);padding:clamp(5rem,12vh,9rem) 1.5rem;overflow:hidden;position:relative;}
+#services::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,255,255,.02) 0%,transparent 60%);pointer-events:none;}
+.srv-inner{max-width:1080px;margin:0 auto;position:relative;}
+.srv-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;}
+.srv-head.rv{opacity:1;transform:translateY(0);}
+.srv-h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4.5vw,3.5rem);color:var(--ink);letter-spacing:-.02em;line-height:1.05;}
+.srv-our{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);}
+@media(max-width:560px){.srv-our{display:none;}}
+.disc-grid{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--rule);border-radius:20px;overflow:hidden;margin-bottom:3rem;}
+@media(min-width:700px){.disc-grid{grid-template-columns:repeat(4,1fr);}}
+.disc-cell{padding:1.4rem 1.3rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .2s;}
+.disc-cell:hover{background:rgba(255,255,255,.04);}
+.disc-glyph{font-size:1rem;color:var(--gold);margin-bottom:.65rem;display:inline-block;}
+.disc-title{font-size:.76rem;font-weight:700;color:var(--ink);margin-bottom:.25rem;letter-spacing:.02em;}
+.disc-desc{font-size:.66rem;color:var(--ink3);line-height:1.65;}
+@keyframes icon-bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@keyframes icon-spin{to{transform:rotate(360deg);}}
+@keyframes icon-pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.4);}}
+@keyframes icon-sway{0%,100%{transform:rotate(-12deg);}50%{transform:rotate(12deg);}}
+@keyframes icon-shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+@keyframes icon-float{0%,100%{transform:translateY(0)rotate(0);}50%{transform:translateY(-6px)rotate(20deg);}}
+@keyframes icon-orbit{from{transform:rotate(0deg)translateX(3px)rotate(0deg);}to{transform:rotate(360deg)translateX(3px)rotate(-360deg);}}
+@keyframes icon-blink{0%,100%{opacity:1;}50%{opacity:.1;}}
+.disc-cell:nth-child(1):hover .disc-glyph{animation:icon-bounce .6s ease infinite;}
+.disc-cell:nth-child(2):hover .disc-glyph{animation:icon-spin .7s linear infinite;}
+.disc-cell:nth-child(3):hover .disc-glyph{animation:icon-pulse .7s ease-in-out infinite;}
+.disc-cell:nth-child(4):hover .disc-glyph{animation:icon-sway .6s ease-in-out infinite;}
+.disc-cell:nth-child(5):hover .disc-glyph{animation:icon-float .8s ease-in-out infinite;}
+.disc-cell:nth-child(6):hover .disc-glyph{animation:icon-shake .5s ease-in-out infinite;}
+.disc-cell:nth-child(7):hover .disc-glyph{animation:icon-orbit 1s linear infinite;}
+.disc-cell:nth-child(8):hover .disc-glyph{animation:icon-blink .6s ease-in-out infinite;}
+.disc-cell:nth-child(9):hover .disc-glyph{animation:icon-bounce .5s ease infinite;}
+.disc-cell:nth-child(10):hover .disc-glyph{animation:icon-spin .8s linear infinite;}
+.disc-cell:nth-child(11):hover .disc-glyph{animation:icon-sway .7s ease-in-out infinite;}
+.disc-cell:nth-child(12):hover .disc-glyph{animation:icon-pulse .8s ease-in-out infinite;}
+
+/* VIDEO SERVICE CARDS */
+.srv-cards{display:grid;grid-template-columns:1fr;gap:1.5rem;}
+@media(min-width:640px){.srv-cards{grid-template-columns:1fr 1fr;}}
+.srv-card{border-radius:24px;overflow:hidden;opacity:0;transform:translateY(50px);transition:opacity .8s,transform .8s;}
+.srv-card.rv{opacity:1;transform:translateY(0);}
+.srv-card:nth-child(2){transition-delay:.15s;}
+.srv-vid-wrap{aspect-ratio:16/9;overflow:hidden;position:relative;}
+.srv-vid-wrap video{width:100%;height:100%;object-fit:cover;transition:transform .7s;}
+.srv-card:hover .srv-vid-wrap video{transform:scale(1.05);}
+.srv-vid-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4),transparent);}
+.srv-body{padding:1.2rem 1.5rem 1.6rem;}
+.srv-body-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;}
+.srv-tag{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);}
+.srv-icon{border-radius:50%;padding:.45rem;display:flex;}
+.srv-icon svg{width:14px;height:14px;stroke:var(--ink);fill:none;stroke-width:1.8;}
+.srv-title{font-family:'Instrument Serif',serif;font-size:clamp(1rem,2.5vw,1.45rem);color:var(--ink);margin-bottom:.6rem;line-height:1.1;}
+.srv-desc{font-size:.75rem;line-height:1.8;color:var(--ink2);}
+
+/* ── PRICING ── */
+#pricing{background:var(--bg);padding:clamp(5rem,10vh,8rem) 1.5rem;}
+.pricing-inner{max-width:1080px;margin:0 auto;}
+.pricing-lbl{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem;}
+.pricing-h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4.5vw,3.5rem);color:var(--ink);line-height:1.05;letter-spacing:-.02em;margin-bottom:3rem;}
+.pricing-h2 em{font-style:italic;color:var(--ink2);}
+.srv-list{border-top:1px solid var(--rule);}
+.srv-row{display:grid;grid-template-columns:1fr;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--rule);opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;}
+@media(min-width:640px){.srv-row{grid-template-columns:160px 1fr;gap:2rem;align-items:start;}}
+.srv-row.rv{opacity:1;transform:translateY(0);}
+.srv-id{font-size:.62rem;color:var(--ink3);letter-spacing:.08em;}
+.srv-name{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--ink);margin-top:4px;}
+.tier-row{display:grid;grid-template-columns:1fr;gap:.6rem;}
+@media(min-width:480px){.tier-row{grid-template-columns:repeat(3,1fr);}}
+.tier{border-radius:14px;padding:.85rem 1rem;}
+.tier.pro{background:rgba(240,169,59,.06);}
+.t-lbl{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;}
+.tier.pro .t-lbl{color:rgba(240,169,59,.7);}
+.t-price{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--ink);line-height:1;}
+.tier.pro .t-price{color:var(--gold);}
+.t-per{font-size:.6rem;color:var(--ink3);margin-bottom:.5rem;}
+.tier ul{list-style:none;}
+.tier ul li{font-size:.62rem;color:var(--ink2);padding:2px 0;display:flex;gap:4px;line-height:1.45;}
+.tier.pro ul li{color:rgba(240,169,59,.7);}
+.tier ul li::before{content:'·';color:var(--ink3);flex-shrink:0;}
+.tier ul li.x{opacity:.25;}
+
+/* ── ARCHITECTURE ── */
+#arch{background:var(--bg2);padding:clamp(5rem,12vh,9rem) 1.5rem;display:flex;align-items:center;justify-content:center;}
+.arch-inner{max-width:680px;width:100%;text-align:center;}
+.arch-eyebrow{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.5rem;}
+.arch-h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,5vw,3.5rem);color:var(--ink);line-height:1.1;letter-spacing:-.02em;margin-bottom:1.5rem;opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s;}
+.arch-h2.rv{opacity:1;transform:translateY(0);}
+.arch-desc{font-size:.8rem;color:var(--ink2);line-height:1.78;max-width:480px;margin:0 auto 4rem;}
+.arch-cards{display:flex;flex-direction:column;align-items:center;gap:.9rem;opacity:0;transition:opacity 1.2s .4s;}
+.arch-cards.rv{opacity:1;}
+.arch-card{max-width:480px;width:100%;height:68px;border-radius:12px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;}
+.arch-card-num{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);}
+.arch-card-name{font-family:'Instrument Serif',serif;font-size:clamp(.95rem,2vw,1.2rem);color:var(--ink);}
+
+/* ── PORTFOLIO SECTION ── */
+#portfolio{background:var(--bg);padding:clamp(5rem,10vh,7rem) 1.5rem;}
+.port-inner{max-width:1080px;margin:0 auto;}
+.port-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;}
+.port-h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--ink);letter-spacing:-.02em;}
+/* filter tabs */
+.port-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.pf-btn{font-size:.7rem;letter-spacing:.08em;padding:.38rem .9rem;border-radius:100px;border:1px solid var(--rule);background:none;color:var(--ink3);cursor:pointer;transition:all .2s;}
+.pf-btn:hover{color:var(--ink);border-color:var(--ink3);}
+.pf-btn.active{background:var(--ink);color:var(--bg);border-color:var(--ink);}
+.port-count{font-size:.7rem;color:var(--ink3);letter-spacing:.08em;margin-bottom:1.5rem;}
+.port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border-radius:20px;overflow:hidden;}
+@media(min-width:700px){.port-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:1000px){.port-grid{grid-template-columns:repeat(4,1fr);}}
+.pcard{aspect-ratio:4/3;position:relative;overflow:hidden;cursor:pointer;background:var(--bg2);}
+.pcard img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.72;transition:transform .5s,opacity .3s;}
+.pcard:hover img{transform:scale(1.07);opacity:.9;}
+.pcard-info{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78),transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:1rem 1.1rem;opacity:0;transition:opacity .3s;}
+.pcard:hover .pcard-info{opacity:1;}
+.pcard-num{font-size:.6rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+.pcard-title{font-family:'Instrument Serif',serif;font-size:.95rem;color:#fff;line-height:1.2;}
+.pcard-tag{font-size:.6rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;margin-top:2px;}
+.pbadge{position:absolute;top:.6rem;right:.6rem;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(240,169,59,.15);color:var(--gold);border:1px solid rgba(240,169,59,.3);padding:3px 9px;border-radius:2rem;backdrop-filter:blur(4px);}
+.pcard-hidden{display:none!important;}
+.pplay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;color:#fff;pointer-events:none;transition:transform .3s,background .3s;}
+.pplay svg{width:18px;height:18px;margin-left:2px;}
+.pcard:hover .pplay{background:var(--gold);color:#0e1e3a;transform:translate(-50%,-50%) scale(1.1);}
+.port-no-results{font-size:.8rem;color:var(--ink3);padding:3rem;text-align:center;display:none;}
+.port-no-results.show{display:block;}
+
+/* lightbox */
+#portModal{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.95);backdrop-filter:blur(10px);flex-direction:column;}
+#portModal.open{display:flex;}
+.modal-top{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;}
+.modal-title{font-size:.8rem;color:rgba(255,255,255,.7);letter-spacing:.04em;}
+.modal-tag{font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;}
+.modal-close{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;}
+.modal-close:hover{background:rgba(255,255,255,.2);}
+.modal-body{flex:1;display:flex;align-items:center;justify-content:center;padding:1.5rem;position:relative;overflow:hidden;}
+.modal-img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;}
+.modal-vload{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:rgba(255,255,255,.5);font-size:.78rem;}
+.spin{width:28px;height:28px;border:2px solid rgba(255,255,255,.1);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.modal-nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.5);color:#fff;font-size:1.2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;z-index:2;}
+.modal-nav-btn:hover{background:rgba(255,255,255,.15);}
+#modalPrev{left:.75rem;}
+#modalNext{right:.75rem;}
+.modal-bottom{padding:.75rem 1.5rem;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.modal-counter{font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.06em;}
+.modal-behance{font-size:.72rem;color:var(--gold);border:1px solid rgba(240,169,59,.35);border-radius:100px;padding:.35rem 1rem;background:none;cursor:pointer;transition:background .2s;}
+.modal-behance:hover{background:rgba(240,169,59,.1);}
+
+/* ── BRANDS ── */
+#brands{background:var(--bg);padding:clamp(4rem,8vh,6rem) 1.5rem;border-top:1px solid var(--rule);}
+.brands-inner{max-width:1080px;margin:0 auto;}
+.brands-lbl{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.5rem;}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border-radius:16px;overflow:hidden;border:1px solid var(--rule);}
+@media(min-width:700px){.brands-grid{grid-template-columns:repeat(5,1fr);}}
+.brand-cell{background:var(--bg);padding:1.1rem 1rem;transition:background .2s;}
+.brand-cell:hover{background:var(--bg2);}
+.brand-name{font-size:.75rem;font-weight:700;color:var(--ink2);margin-bottom:2px;letter-spacing:.01em;}
+.brand-cat{font-size:.6rem;color:var(--ink3);}
+
+/* ── FOOTER ── */
+#footer-sec{background:var(--bg);border-top:1px solid var(--rule);overflow:hidden;}
+.footer-inner{display:flex;flex-direction:column;min-height:420px;}
+@media(min-width:700px){.footer-inner{flex-direction:row;}}
+.footer-art-side{height:260px;overflow:hidden;position:relative;flex-shrink:0;}
+@media(min-width:700px){.footer-art-side{width:50%;height:auto;}}
+.footer-art-side img{width:100%;height:100%;object-fit:cover;object-position:35% 30%;filter:brightness(.58) saturate(1.1);}
+.footer-right{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(2rem,5vw,3.5rem);flex:1;}
+.footer-logo-row{display:flex;align-items:center;gap:9px;margin-bottom:1.4rem;}
+.footer-logo-svg{width:18px;height:18px;fill:var(--ink2);}
+.footer-logo-name{font-size:.85rem;font-weight:700;color:var(--ink2);letter-spacing:-.01em;}
+.footer-tagline{font-size:.8rem;color:var(--ink2);line-height:1.75;max-width:360px;}
+.footer-contact{margin-top:1.8rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+.fc-lbl{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.3rem;}
+.fc-val{font-size:.8rem;color:var(--ink);display:block;transition:color .2s;}
+a.fc-val:hover{color:var(--gold);}
+.footer-locs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.loc-tag{font-size:.62rem;color:var(--ink3);border:1px solid var(--rule);border-radius:100px;padding:.28rem .7rem;display:flex;align-items:center;gap:.35rem;}
+.footer-copy{font-size:.62rem;color:var(--ink3);letter-spacing:.04em;margin-top:2rem;}
+
+/* ── FLOATING ── */
+.wa-btn{position:fixed;bottom:1.8rem;right:1.8rem;z-index:400;width:50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.3);transition:transform .2s;}
+.wa-btn:hover{transform:scale(1.08);}
+.wa-btn svg{width:24px;height:24px;fill:#fff;}
+.chat-btn{position:fixed;bottom:1.8rem;left:1.8rem;z-index:400;display:flex;align-items:center;gap:7px;border-radius:100px;padding:.5rem 1rem .5rem .65rem;font-size:.7rem;color:var(--ink);letter-spacing:.04em;background:none;border:none;cursor:pointer;transition:background .2s;}
+.chat-btn:hover{background:rgba(255,255,255,.08);}
+.chat-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:pd 1.8s ease-in-out infinite;}
+@keyframes pd{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.6);}50%{box-shadow:0 0 0 5px rgba(74,222,128,0);}}
+
+/* ── REVEAL ── */
+[data-rv]{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;}
+[data-rv].rv{opacity:1;transform:translateY(0);}
+[data-rv="2"]{transition-delay:.15s;}
+[data-rv="3"]{transition-delay:.3s;}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;}}
+</style>
+</head>
+<body>
+
+<!-- MOB DRAWER -->
+<div class="mob-drawer" id="mobDrawer">
+  <button class="mob-draw-lnk" onclick="closeMob();window.location='index.html#services'">Services</button>
+  <button class="mob-draw-lnk" onclick="closeMob();go('#portfolio')">Work</button>
+  <button class="mob-draw-lnk" onclick="closeMob();window.location='index.html#brands'">Clients</button>
+  <button class="mob-draw-lnk" onclick="closeMob();go('#footer-sec')">Contact</button>
+  <button class="mob-draw-cta" onclick="closeMob();go('#footer-sec')">Get in touch</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-pill" id="navPill">
+    <div class="nav-dot" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </div>
+    <div class="nav-l">
+      <a href="index.html" class="nav-logo-wrap">
+        <svg class="nav-logo-icon" viewBox="-50 -50 100 100">
+          <path d="M 1.5,23 L 1.5,33 C 1.5,38.5 6,43 11.5,43 L 16.5,43 C 22,43 26.5,38.5 26.5,33 Q 28,28 33,26.5 C 38.5,26.5 43,22 43,16.5 L 43,11.5 C 43,6 38.5,1.5 33,1.5 L 23,1.5 Q 12,12 1.5,23 Z"/>
+          <path d="M -1.5,23 L -1.5,33 C -1.5,38.5 -6,43 -11.5,43 L -16.5,43 C -22,43 -26.5,38.5 -26.5,33 Q -28,28 -33,26.5 C -38.5,26.5 -43,22 -43,16.5 L -43,11.5 C -43,6 -38.5,1.5 -33,1.5 L -23,1.5 Q -12,12 -1.5,23 Z"/>
+          <path d="M 1.5,-23 L 1.5,-33 C 1.5,-38.5 6,-43 11.5,-43 L 16.5,-43 C 22,-43 26.5,-38.5 26.5,-33 Q 28,-28 33,-26.5 C 38.5,-26.5 43,-22 43,-16.5 L 43,-11.5 C 43,-6 38.5,-1.5 33,-1.5 L 23,-1.5 Q 12,-12 1.5,-23 Z"/>
+          <path d="M -1.5,-23 L -1.5,-33 C -1.5,-38.5 -6,-43 -11.5,-43 L -16.5,-43 C -22,-43 -26.5,-38.5 -26.5,-33 Q -28,-28 -33,-26.5 C -38.5,-26.5 -43,-22 -43,-16.5 L -43,-11.5 C -43,-6 -38.5,-1.5 -33,-1.5 L -23,-1.5 Q -12,-12 -1.5,-23 Z"/>
+        </svg>
+        <span class="nav-logo-text">Aramana</span>
+      </a>
+      <div class="nav-links-desk">
+        <button class="nav-lnk" onclick="window.location='index.html#services'">Services</button>
+        <button class="nav-lnk" onclick="go('#portfolio')">Work</button>
+        <button class="nav-lnk" onclick="window.location='index.html#brands'">Clients</button>
+        <button class="nav-lnk" onclick="go('#footer-sec')">Contact</button>
+      </div>
+    </div>
+    <div class="nav-r">
+      <button class="nav-cta nav-cta-desk" onclick="go('#footer-sec')">Get in touch</button>
+      <button class="mob-hbg" id="mobHbg"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<!-- ── PAGE HEADER ── -->
+<section style="background:var(--bg);padding:calc(7rem + 2rem) 1.5rem 3rem;border-bottom:1px solid var(--rule);">
+  <div style="max-width:1080px;margin:0 auto;">
+    <p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem;">Portfolio</p>
+    <h1 style="font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,7vw,5.5rem);color:var(--ink);line-height:1.05;letter-spacing:-.02em;">All <em style="font-style:italic;color:var(--ink2);">projects.</em></h1>
+    <p style="font-size:.85rem;color:var(--ink2);margin-top:1.2rem;max-width:520px;line-height:1.7;">Every piece of work across motion, brand, UI/UX and AI production — browse the full archive below.</p>
+  </div>
+</section>
+
+<section id="portfolio" style="padding-top:clamp(2rem,6vh,3rem);">
+  <div class="port-inner">
+    <div class="port-filters" id="portFilters">
+      <button class="pf-btn active" data-cat="all">All</button>
+      <button class="pf-btn" data-cat="video">Video</button>
+      <button class="pf-btn" data-cat="social">Social</button>
+      <button class="pf-btn" data-cat="design">Design</button>
+      <button class="pf-btn" data-cat="brand">Brand</button>
+      <button class="pf-btn" data-cat="ui">UI/UX</button>
+      <button class="pf-btn" data-cat="illus">Illustration</button>
+    </div>
+    <p class="port-count"><span id="portCount">24</span> projects</p>
+    <div class="port-grid" id="portGrid"></div>
+    <p class="port-no-results" id="portNR">No projects in this category.</p>
+    <p style="text-align:center;margin-top:3rem;font-size:.8rem;color:var(--ink3);">There are 100+ projects in total — we're uploading the rest soon.</p>
+  </div>
+</section>
+
+<section id="footer-sec">
+  <div class="footer-inner">
+    <div class="footer-art-side">
+      <img src="folk-art.jpg" alt="Folk art">
+    </div>
+    <div class="footer-right">
+      <div>
+        <div class="footer-logo-row">
+          <svg class="footer-logo-svg" viewBox="-50 -50 100 100">
+            <path d="M 1.5,23 L 1.5,33 C 1.5,38.5 6,43 11.5,43 L 16.5,43 C 22,43 26.5,38.5 26.5,33 Q 28,28 33,26.5 C 38.5,26.5 43,22 43,16.5 L 43,11.5 C 43,6 38.5,1.5 33,1.5 L 23,1.5 Q 12,12 1.5,23 Z"/>
+            <path d="M -1.5,23 L -1.5,33 C -1.5,38.5 -6,43 -11.5,43 L -16.5,43 C -22,43 -26.5,38.5 -26.5,33 Q -28,28 -33,26.5 C -38.5,26.5 -43,22 -43,16.5 L -43,11.5 C -43,6 -38.5,1.5 -33,1.5 L -23,1.5 Q -12,12 -1.5,23 Z"/>
+            <path d="M 1.5,-23 L 1.5,-33 C 1.5,-38.5 6,-43 11.5,-43 L 16.5,-43 C 22,-43 26.5,-38.5 26.5,-33 Q 28,-28 33,-26.5 C 38.5,-26.5 43,-22 43,-16.5 L 43,-11.5 C 43,-6 38.5,-1.5 33,-1.5 L 23,-1.5 Q 12,-12 1.5,-23 Z"/>
+            <path d="M -1.5,-23 L -1.5,-33 C -1.5,-38.5 -6,-43 -11.5,-43 L -16.5,-43 C -22,-43 -26.5,-38.5 -26.5,-33 Q -28,-28 -33,-26.5 C -38.5,-26.5 -43,-22 -43,-16.5 L -43,-11.5 C -43,-6 -38.5,-1.5 -33,-1.5 L -23,-1.5 Q -12,-12 -1.5,-23 Z"/>
+          </svg>
+          <span class="footer-logo-name">Aramana</span>
+        </div>
+        <p class="footer-tagline">Got a project in mind? We're the team that gets it done — motion, brand, UI/UX, AI production. We respond within 24 hours.</p>
+        <div class="footer-contact">
+          <div><div class="fc-lbl">Email</div><a href="mailto:hi@aramana.in" class="fc-val">hi@aramana.in</a></div>
+          <div><div class="fc-lbl">Headquarters</div><div class="fc-val">Bangalore, India</div></div>
+          <div><div class="fc-lbl">Website</div><a href="https://www.aramana.in" class="fc-val">www.aramana.in</a></div>
+          <div><div class="fc-lbl">WhatsApp</div><a href="https://wa.me/919403155664" class="fc-val" target="_blank">Chat now →</a></div>
+        </div>
+        <div class="footer-locs">
+          <span class="loc-tag">🇮🇳 Bengaluru</span><span class="loc-tag">🇮🇳 Kochi</span>
+          <span class="loc-tag">🇮🇳 Mumbai</span><span class="loc-tag">🇸🇦 Saudi Arabia</span>
+          <span class="loc-tag">🇩🇪 Germany</span><span class="loc-tag">🇦🇹 Austria</span>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 Aramana Creative Studio. All rights reserved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING -->
+<button class="chat-btn" onclick="if(window.Tawk_API&&Tawk_API.toggle)Tawk_API.toggle();" style="font-family:'Space Mono',monospace;">
+  <span class="chat-dot"></span>Live chat
+</button>
+<a href="https://wa.me/919403155664" class="wa-btn" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src='https://embed.tawk.to/620392139bd1f31184dbb4e4/1jrpqvtmi';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();</script>
+<script>Tawk_API.onLoad=function(){Tawk_API.hideWidget();};</script>
+
+<script>
+/* ── NAV ── */
+/* lock hero to true visible viewport height (fixes marquee peeking in on fullscreen/mobile) */
+function setVH(){document.documentElement.style.setProperty('--vh',(window.innerHeight*0.01)+'px');}
+setVH();
+window.addEventListener('resize',setVH);
+window.addEventListener('orientationchange',setVH);
+document.addEventListener('fullscreenchange',setVH);
+document.addEventListener('webkitfullscreenchange',setVH);
+
+setTimeout(()=>document.getElementById('nav').classList.add('show'),300);
+
+/* collapse nav to round button after scrolling past hero */
+(function(){
+  const navEl=document.getElementById('nav'),heroEl=document.getElementById('hero');
+  if(!navEl||!heroEl)return;
+  function checkShrink(){
+    const past=heroEl.getBoundingClientRect().bottom<=80;
+    navEl.classList.toggle('shrink',past);
+  }
+  checkShrink();
+  window.addEventListener('scroll',checkShrink,{passive:true});
+  window.addEventListener('resize',checkShrink);
+})();
+function go(sel){const el=document.querySelector(sel);if(el)el.scrollIntoView({behavior:'smooth'});}
+
+/* ── MOB DRAWER ── */
+const mobHbg=document.getElementById('mobHbg'),mobDrawer=document.getElementById('mobDrawer');
+function closeMob(){mobDrawer.classList.remove('open');mobHbg.classList.remove('open');document.body.style.overflow='';}
+mobHbg.addEventListener('click',()=>{const o=mobDrawer.classList.toggle('open');mobHbg.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});
+
+/* ── MARQUEE ── */
+(function(){
+  const inn=document.getElementById('mInner'),tr=document.getElementById('mTrack');
+  if(!inn||!tr)return;
+  inn.appendChild(tr.cloneNode(true));
+  let p=0,paused=false;
+  inn.addEventListener('mouseenter',()=>paused=true);
+  inn.addEventListener('mouseleave',()=>paused=false);
+  (function r(){if(!paused){p-=.45;if(Math.abs(p)>=tr.offsetWidth)p=0;inn.style.transform=`translateX(${p}px)`;}requestAnimationFrame(r);})();
+})();
+
+/* ── PORTFOLIO DATA ── */
+const pmData=[
+  {num:'01',title:'Graphic Design (Social Media Ad Post)',tag:'Graphic Design · Social',cat:'design social',badge:'Design',bid:'236041613',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/26bdf8236041613.Y3JvcCwxMDgwLDg0NCwwLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/26bdf8236041613.Y3JvcCwxMDgwLDg0NCwwLDA.jpg'},
+  {num:'02',title:'Matter EV — R&D Film',tag:'Brand Film · Motion',cat:'video brand',badge:'Film',bid:'247320763',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/540442247320763.Y3JvcCwxODU2LDE0NTIsMCww.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/540442247320763.Y3JvcCwxODU2LDE0NTIsMCww.jpg'},
+  {num:'03',title:'Ola Sankalp — Recap Reel Video Edits',tag:'Video · Event',cat:'video social',badge:'Video',bid:'236044865',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/730420236044865.Y3JvcCwxMTM0LDg4NywzMTQsODk.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/730420236044865.Y3JvcCwxMTM0LDg4NywzMTQsODk.png'},
+  {num:'04',title:'Genz Target — Ola S1 Pro+ Social Media Video',tag:'Social Video · Campaign',cat:'video social',badge:'Video',bid:'236043363',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/6ea18d236043363.Y3JvcCwxMDgwLDg0NCwwLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/6ea18d236043363.Y3JvcCwxMDgwLDg0NCwwLDA.jpg'},
+  {num:'05',title:'Ola S1 Pro+ Social Video Performance Ad',tag:'Social Video · Performance',cat:'video social',badge:'Video',bid:'236042579',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/efaa1f236042579.Y3JvcCw4MDcsNjMxLDMzLDEz.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/efaa1f236042579.Y3JvcCw4MDcsNjMxLDMzLDEz.png'},
+  {num:'06',title:'Architecture Website UI Design',tag:'UI Design · Website',cat:'ui',badge:'UI/UX',bid:'226789769',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/99f8a7226789769.Y3JvcCwxMjAwLDkzOCwwLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/99f8a7226789769.Y3JvcCwxMjAwLDkzOCwwLDA.png'},
+  {num:'07',title:'Merch Design — T-shirt Design',tag:'Merch · Apparel Design',cat:'design brand',badge:'Design',bid:'226786271',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/50b837226786271.Y3JvcCwzMjE0LDI1MTQsNDM3LDUzMw.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/50b837226786271.Y3JvcCwzMjE0LDI1MTQsNDM3LDUzMw.png'},
+  {num:'08',title:'OLA MAP — Social Video',tag:'Video · Campaign',cat:'video social',badge:'Video',bid:'247321833',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/1cbe29247321833.Y3JvcCw3ODUsNjE0LDE1NSww.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/1cbe29247321833.Y3JvcCw3ODUsNjE0LDE1NSww.jpg'},
+  {num:'09',title:'Branding and Sustainable — Case Study',tag:'Brand · Case Study',cat:'brand design',badge:'Brand',bid:'226789017',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/2b833a226789017.Y3JvcCwxMzgwLDEwODAsMCww.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/2b833a226789017.Y3JvcCwxMzgwLDEwODAsMCww.png'},
+  {num:'10',title:'UI Design — Team Management System',tag:'UI/UX · Web App',cat:'ui',badge:'UI/UX',bid:'228020053',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/05ab3c228020053.Y3JvcCwzMjgxLDI1NjYsMjQzLDEwNzA2.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/05ab3c228020053.Y3JvcCwzMjgxLDI1NjYsMjQzLDEwNzA2.jpg'},
+  {num:'11',title:'News Paper Ad Design',tag:'Print · Ad Design',cat:'design brand',badge:'Design',bid:'226783167',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/5970a8226783167.Y3JvcCwyNDgwLDE5MzksMCwxMjg.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/5970a8226783167.Y3JvcCwyNDgwLDE5MzksMCwxMjg.jpg'},
+  {num:'12',title:'Envelope Design — Travengeon',tag:'Brand · Stationery',cat:'brand design',badge:'Brand',bid:'226781907',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/ed09d0226781907.Y3JvcCwzODM1LDMwMDAsMzMyLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/ed09d0226781907.Y3JvcCwzODM1LDMwMDAsMzMyLDA.jpg'},
+  {num:'13',title:'Corporate Company Introduction Video',tag:'Video · Corporate',cat:'video brand',badge:'Video',bid:'231477741',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/ef94e9231477741.Y3JvcCwxMzc5LDEwNzksMjY5LDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/ef94e9231477741.Y3JvcCwxMzc5LDEwNzksMjY5LDA.png'},
+  {num:'14',title:'Finance App Design',tag:'UI/UX · App Design',cat:'ui',badge:'UI/UX',bid:'228036407',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/a53089228036407.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/a53089228036407.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png'},
+  {num:'15',title:'Infographic Design',tag:'Design · Infographic',cat:'design',badge:'Design',bid:'230887601',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/1a1c26230887601.Y3JvcCwzNzA2LDI4OTksNDU4LDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/1a1c26230887601.Y3JvcCwzNzA2LDI4OTksNDU4LDA.png'},
+  {num:'16',title:'Banner Design',tag:'Design · Banner',cat:'design brand',badge:'Design',bid:'230886207',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/3d6dae230886207.Y3JvcCwyNzY4LDIxNjUsMTU3LDE0Mw.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/3d6dae230886207.Y3JvcCwyNzY4LDIxNjUsMTU3LDE0Mw.png'},
+  {num:'17',title:'Branding — Kinteraa',tag:'Brand Identity',cat:'brand',badge:'Brand',bid:'226791615',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/0944b1226791615.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/0944b1226791615.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png'},
+  {num:'18',title:'Social Media Poster Design II',tag:'Poster · Social',cat:'design social',badge:'Social',bid:'226784969',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/f9e2f2226784969.Y3JvcCwxMDgwLDg0NCwwLDMxMA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/f9e2f2226784969.Y3JvcCwxMDgwLDg0NCwwLDMxMA.png'},
+  {num:'19',title:'Logo Design',tag:'Brand · Logo Design',cat:'brand design',badge:'Brand',bid:'230886971',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/463eeb230886971.Y3JvcCwzNzA2LDI4OTksNTMyLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/463eeb230886971.Y3JvcCwzNzA2LDI4OTksNTMyLDA.png'},
+  {num:'20',title:'Motion Video — Social',tag:'Video · Motion',cat:'video social',badge:'Video',bid:'247337901',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/675462247337901.Y3JvcCwyMDYzLDE2MTQsNjUzLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/675462247337901.Y3JvcCwyMDYzLDE2MTQsNjUzLDA.png'},
+  {num:'21',title:'Copy Writing Case Study — UltraTech Cement',tag:'Brand · Copywriting',cat:'brand design',badge:'Brand',bid:'228070839',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/de86a6228070839.Y3JvcCw4MTMsNjM2LDI5NSw4Ng.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/de86a6228070839.Y3JvcCw4MTMsNjM2LDI5NSw4Ng.jpg'},
+  {num:'22',title:'Mobile App UI Re-Design — Case Study',tag:'UI/UX · Case Study',cat:'ui',badge:'UI/UX',bid:'226780529',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/c455e6226780529.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpeg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/c455e6226780529.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpeg'},
+  {num:'23',title:'Illustration ❤️',tag:'Illustration · Digital Art',cat:'illus design',badge:'Illustration',bid:'230888817',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/5585af230888817.6964a1c252d16.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/5585af230888817.6964a1c252d16.jpg'},
+  {num:'24',title:'Infographic Digital Outdoor Video Ad',tag:'Video · Outdoor Ad',cat:'video design',badge:'Video',bid:'226787025',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/70af92226787025.Y3JvcCwxMzc5LDEwNzksMjczLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/70af92226787025.Y3JvcCwxMzc5LDEwNzksMjczLDA.png'},
+  {num:'25',title:'Dexrio — Carry Bag Design',tag:'Packaging · Product',cat:'design brand',badge:'Design',bid:'226780029',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/16a885226780029.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/16a885226780029.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg'},
+  {num:'26',title:'Email Banner Design',tag:'Design · Digital',cat:'design',badge:'Design',bid:'226781231',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/2eb2f6226781231.Y3JvcCwyMjIyLDE3MzgsMCww.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/2eb2f6226781231.Y3JvcCwyMjIyLDE3MzgsMCww.png'},
+  {num:'27',title:'Outdoor Ad Design — Travengeon',tag:'Outdoor · Ad Design',cat:'design brand',badge:'Design',bid:'226782455',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/2d9d32226782455.Y3JvcCw0MjYxLDMzMzMsMzY5LDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/2d9d32226782455.Y3JvcCw0MjYxLDMzMzMsMzY5LDA.jpg'},
+  {num:'28',title:'Social Media Poster Design',tag:'Poster · Design',cat:'design social',badge:'Social',bid:'236044445',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/59360e236044445.Y3JvcCwxMDgwLDg0NCwwLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/59360e236044445.Y3JvcCwxMDgwLDg0NCwwLDA.jpg'},
+  {num:'29',title:'Product Package Design',tag:'Packaging · Product',cat:'design brand',badge:'Design',bid:'226788013',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/1e9d67226788013.Y3JvcCwxNTU1MiwxMjE2NCwwLDM4.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/1e9d67226788013.Y3JvcCwxNTU1MiwxMjE2NCwwLDM4.png'},
+  {num:'30',title:'Illustration',tag:'Illustration · Digital Art',cat:'illus design',badge:'Illustration',bid:'226790559',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/7fccb9226790559.Y3JvcCwxOTk5LDE1NjQsMzkxLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/7fccb9226790559.Y3JvcCwxOTk5LDE1NjQsMzkxLDA.jpg'},
+  {num:'31',title:'Ganesh Chaturthi Motion Graphics Instagram Reel',tag:'Motion Graphics · Festive',cat:'video design social',badge:'Motion',bid:'236042261',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/8b17de236042261.Y3JvcCwxMDAyLDc4MywwLDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/8b17de236042261.Y3JvcCwxMDAyLDc4MywwLDA.png'},
+  {num:'32',title:'Urtopia UI Design',tag:'UI/UX · Product App',cat:'ui',badge:'UI/UX',bid:'226779681',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/b7136c226779681.Y3JvcCwxNTM0LDEyMDAsMzQsMA.jpeg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/b7136c226779681.Y3JvcCwxNTM0LDEyMDAsMzQsMA.jpeg'},
+  {num:'33',title:'OLA Employee Voxpop Video',tag:'Video · Corporate',cat:'video brand',badge:'Video',bid:'236039123',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/7fb6c1236039123.Y3JvcCwxMDgwLDg0NCwwLDA.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/7fb6c1236039123.Y3JvcCwxMDgwLDg0NCwwLDA.jpg'},
+  {num:'34',title:'App UI Design',tag:'UI/UX · App Design',cat:'ui',badge:'UI/UX',bid:'226785899',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/4fe585226785899.Y3JvcCwxMzgwLDEwODAsMjM5LDA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/4fe585226785899.Y3JvcCwxMzgwLDEwODAsMjM5LDA.png'},
+  {num:'35',title:'Social Media Post Design',tag:'Social · Post Design',cat:'design social',badge:'Social',bid:'226784345',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/ca04a1226784345.Y3JvcCwxMDEyLDc5MSw2NSwyNw.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/ca04a1226784345.Y3JvcCwxMDEyLDc5MSw2NSwyNw.jpg'},
+  {num:'36',title:'OLA ELECTRIC Sankalp Announcement Reel Video',tag:'Video · Announcement',cat:'video social',badge:'Video',bid:'236039633',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/9709db236039633.Y3JvcCw4NTEsNjY2LDExMyww.jpg',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/9709db236039633.Y3JvcCw4NTEsNjY2LDExMyww.jpg'},
+  {num:'37',title:'Minimal Luxury Abstract Wall Clock Design',tag:'Product Design · Minimal',cat:'design',badge:'Design',bid:'229744351',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/411b3c229744351.Y3JvcCwxMzc5LDEwNzksODEsMTE2.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/411b3c229744351.Y3JvcCwxMzc5LDEwNzksODEsMTE2.png'},
+  {num:'38',title:'Brand Design',tag:'Brand Identity',cat:'brand design',badge:'Brand',bid:'226791961',
+   thumb:'https://mir-s3-cdn-cf.behance.net/projects/404/7ecb0f226791961.Y3JvcCw3MTcsNTYxLDM0MSw5NA.png',
+   full:'https://mir-s3-cdn-cf.behance.net/projects/404/7ecb0f226791961.Y3JvcCw3MTcsNTYxLDM0MSw5NA.png'},
+  {num:'39',title:'Ola Electric — 2025 Was The Shift, 2026 Will Be The Surge',tag:'Video · Brand Film',cat:'video brand',badge:'Video',bid:'',yt:'Nuin5hAVCiw',
+   thumb:'https://img.youtube.com/vi/Nuin5hAVCiw/maxresdefault.jpg',
+   full:'https://img.youtube.com/vi/Nuin5hAVCiw/maxresdefault.jpg'},
+  {num:'40',title:'Documents — InDesign Layout',tag:'Print · Editorial',cat:'design',badge:'Design',bid:'',link:'https://dribbble.com/shots/25515239-Documents-Indesign',
+   thumb:'https://cdn.dribbble.com/userupload/18826985/file/original-991a780bcf3c79f9085110f8b84eca2c.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/18826985/file/original-991a780bcf3c79f9085110f8b84eca2c.jpg?resize=1400x0'},
+  {num:'41',title:'Carousel Post',tag:'Social · Carousel',cat:'design social',badge:'Social',bid:'',link:'https://dribbble.com/shots/25515163-Carousel-post',
+   thumb:'https://cdn.dribbble.com/userupload/18824776/file/original-401b2cc8cb3731741241a3d8c0e37742.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/18824776/file/original-401b2cc8cb3731741241a3d8c0e37742.jpg?resize=1400x0'},
+  {num:'42',title:'Social Media Design — II',tag:'Social · Design',cat:'design social',badge:'Social',bid:'',link:'https://dribbble.com/shots/25275864-Social-media',
+   thumb:'https://cdn.dribbble.com/userupload/17833858/file/original-3208c57d8aafdf1941dcd2eeaf162e21.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/17833858/file/original-3208c57d8aafdf1941dcd2eeaf162e21.jpg?resize=1400x0'},
+  {num:'43',title:'Web Banner Design',tag:'Design · Web Banner',cat:'design',badge:'Design',bid:'',link:'https://dribbble.com/shots/24381612-Web-banner',
+   thumb:'https://cdn.dribbble.com/userupload/15186344/file/original-849a72c8711982254d90ad2c69bf2b08.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/15186344/file/original-849a72c8711982254d90ad2c69bf2b08.jpg?resize=1400x0'},
+  {num:'44',title:'Landing Page Poster',tag:'UI · Poster',cat:'ui design',badge:'UI/UX',bid:'',link:'https://dribbble.com/shots/24136800-Landing-page-poster',
+   thumb:'https://cdn.dribbble.com/userupload/14475065/file/original-569c33f2afb3187098b8f8b92d202edf.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/14475065/file/original-569c33f2afb3187098b8f8b92d202edf.jpg?resize=1400x0'},
+  {num:'45',title:'Banner Design — I',tag:'Design · Banner',cat:'design brand',badge:'Design',bid:'',link:'https://dribbble.com/shots/22105980-Banner',
+   thumb:'https://cdn.dribbble.com/userupload/8857608/file/original-fc36f446b1b43f4a79527df0326df39a.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/8857608/file/original-fc36f446b1b43f4a79527df0326df39a.jpg?resize=1400x0'},
+  {num:'46',title:'Ryanair Projects',tag:'Brand · Campaign',cat:'brand design',badge:'Brand',bid:'',link:'https://dribbble.com/shots/22105603-Rynair-Projects',
+   thumb:'https://cdn.dribbble.com/userupload/8856684/file/original-35f1ad3d1933862156bf2fe22709afdd.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/8856684/file/original-35f1ad3d1933862156bf2fe22709afdd.jpg?resize=1400x0'},
+  {num:'47',title:'Banner Design — II',tag:'Design · Banner',cat:'design brand',badge:'Design',bid:'',link:'https://dribbble.com/shots/21726184-Banner',
+   thumb:'https://cdn.dribbble.com/userupload/7773313/file/original-3c35e9f1007e81be91ce658f89b6ee14.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/7773313/file/original-3c35e9f1007e81be91ce658f89b6ee14.jpg?resize=1400x0'},
+  {num:'48',title:'Poster Design — I',tag:'Print · Poster',cat:'design',badge:'Design',bid:'',link:'https://dribbble.com/shots/21723598-Poster',
+   thumb:'https://cdn.dribbble.com/userupload/7766993/file/original-5d8c8af11d5c993541420e1c049b32ed.png?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/7766993/file/original-5d8c8af11d5c993541420e1c049b32ed.png?resize=1400x0'},
+  {num:'49',title:'Poster Design — II',tag:'Print · Poster',cat:'design',badge:'Design',bid:'',link:'https://dribbble.com/shots/21721045-Poster',
+   thumb:'https://cdn.dribbble.com/userupload/7760863/file/original-9e93844b888918582b2cf6fcbe063e71.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/7760863/file/original-9e93844b888918582b2cf6fcbe063e71.jpg?resize=1400x0'},
+  {num:'50',title:'Banner Design — III',tag:'Design · Banner',cat:'design brand',badge:'Design',bid:'',link:'https://dribbble.com/shots/21721052-Banner',
+   thumb:'https://cdn.dribbble.com/userupload/7760877/file/original-e821a7a4ea3f67365c695322408cc5bb.jpg?resize=800x0',
+   full:'https://cdn.dribbble.com/userupload/7760877/file/original-e821a7a4ea3f67365c695322408cc5bb.jpg?resize=1400x0'},
+];
+
+/* render grid — full portfolio page (all projects, with filters) */
+let activeCat='all',mIdx=0,filteredIdx=[];
+function renderGrid(){
+  const grid=document.getElementById('portGrid'),nr=document.getElementById('portNR');
+  grid.innerHTML='';filteredIdx=[];
+  pmData.forEach((p,i)=>{
+    const match=activeCat==='all'||p.cat.split(' ').includes(activeCat);
+    if(!match)return;
+    filteredIdx.push(i);
+    const d=document.createElement('div');d.className='pcard';
+    d.innerHTML=`<img src="${p.thumb}" alt="${p.title}" loading="lazy">
+      ${p.yt?'<div class="pplay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>':''}
+      <div class="pcard-info"><div class="pcard-num">${p.num}</div><div class="pcard-title">${p.title}</div><div class="pcard-tag">${p.tag}</div></div>
+      <div class="pbadge">${p.badge}</div>`;
+    d.addEventListener('click',()=>openModal(i));
+    grid.appendChild(d);
+  });
+  document.getElementById('portCount').textContent=filteredIdx.length;
+  nr.classList.toggle('show',filteredIdx.length===0);
+}
+renderGrid();
+
+/* filter tabs */
+document.getElementById('portFilters').addEventListener('click',e=>{
+  const btn=e.target.closest('.pf-btn');if(!btn)return;
+  document.querySelectorAll('.pf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');activeCat=btn.dataset.cat;renderGrid();
+});
+
+/* modal */
+function openModal(globalIdx){
+  mIdx=globalIdx;
+  const p=pmData[mIdx];
+  document.getElementById('mTitle').textContent=p.title;
+  document.getElementById('mTag').textContent=p.tag;
+  const img=document.getElementById('mImg'),yt=document.getElementById('mYt');
+  img.style.display='none';yt.style.display='none';yt.src='';
+  if(p.yt){
+    document.getElementById('mVload').style.display='none';
+    yt.src=`https://www.youtube.com/embed/${p.yt}?autoplay=1&mute=1&loop=1&playlist=${p.yt}`;
+    yt.style.display='block';
+  }else{
+    document.getElementById('mVload').style.display='flex';
+    img.src='';img.src=p.full;
+  }
+  updateModalCounter();
+  document.getElementById('portModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('portModal').classList.remove('open');document.body.style.overflow='';const yt=document.getElementById('mYt');yt.src='';yt.style.display='none';}
+function navModal(dir){
+  const pos=filteredIdx.indexOf(mIdx);
+  if(pos<0)return;
+  const next=filteredIdx[(pos+dir+filteredIdx.length)%filteredIdx.length];
+  openModal(next);
+}
+function updateModalCounter(){
+  const pos=filteredIdx.indexOf(mIdx);
+  document.getElementById('mCounter').textContent=`${pos+1} / ${filteredIdx.length}`;
+}
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('portModal').classList.contains('open'))return;
+  if(e.key==='Escape')closeModal();
+  if(e.key==='ArrowLeft')navModal(-1);
+  if(e.key==='ArrowRight')navModal(1);
+});
+document.getElementById('portModal').addEventListener('click',e=>{if(e.target===document.getElementById('portModal'))closeModal();});
+
+/* ── INTERSECTION REVEALS ── */
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('rv');});},{threshold:.08});
+
+/* generic data-rv */
+document.querySelectorAll('[data-rv]').forEach(el=>io.observe(el));
+
+/* named elements */
+['aLbl','aH2','sLbl','sv0','sv1','sv2','philH2','philImg','philRight','featCard','srvHead','archH2','archCards'].forEach(id=>{
+  const el=document.getElementById(id);if(el)io.observe(el);
+});
+
+/* about special */
+const aLbl=document.getElementById('aLbl'),aH2=document.getElementById('aH2');
+if(aLbl&&aH2){
+  const aObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){aLbl.classList.add('rv');setTimeout(()=>aH2.classList.add('rv'),120);}});},{threshold:.2});
+  aObs.observe(aLbl);
+}
+
+/* stats */
+const sObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.getElementById('sLbl').classList.add('rv');[0,1,2].forEach((i,d)=>setTimeout(()=>{const el=document.getElementById('sv'+i);if(el)el.classList.add('rv');},d*160));}});},{threshold:.2});
+const sLbl=document.getElementById('sLbl');if(sLbl)sObs.observe(sLbl);
+
+/* phil */
+const pObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){['philH2','philImg','philRight'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('rv');});}});},{threshold:.15});
+const ph=document.getElementById('philH2');if(ph)pObs.observe(ph);
+
+/* arch */
+const archObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const h=document.getElementById('archH2'),c=document.getElementById('archCards');if(h)h.classList.add('rv');if(c)c.classList.add('rv');}});},{threshold:.2});
+const ah=document.getElementById('archH2');if(ah)archObs.observe(ah);
+
+/* srv */
+const shObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('rv');});},{threshold:.2});
+const sh=document.getElementById('srvHead');if(sh)shObs.observe(sh);
+
+/* pricing rows stagger */
+document.querySelectorAll('.srv-row').forEach((el,i)=>{
+  el.style.transitionDelay=(i%4*.08)+'s';io.observe(el);
+});
+</script>
+</body>
+</html>

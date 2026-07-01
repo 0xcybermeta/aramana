@@ -1,0 +1,29 @@
+# Aramana Creative Studio
+
+> Aramana is a Bangalore-based creative studio offering content creation, motion design, brand identity, UI/UX design, social media creatives, website design and AI-powered production for global brands.
+
+Aramana is a collective of senior creatives who have worked with brands including Ola Electric, Matter Motor Works, Publicis Groupe, EY, HCL, SBI Foundation, Ryanair and others across EV/mobility, professional services, healthcare and consumer industries. The studio is based in Bangalore, India and serves clients across India, Germany and Austria.
+
+## Services
+- Content creation & social media reels
+- Brand identity design (logo, guidelines, visual systems)
+- UI/UX design (wireframing, prototyping, design systems)
+- Motion graphics & video production (brand films, social video)
+- Website design & development (responsive, SEO-ready, CMS)
+- AI-powered creative production (AI campaign visuals, AI-assisted workflows)
+- Pitch deck & presentation design
+- Influencer marketing & content strategy
+- Web3 & blockchain brand/design consulting
+- Feasibility & market research
+
+## Key pages
+- Homepage: https://www.aramana.in/ — overview, services, pricing, brands worked with, FAQ
+- Portfolio: https://www.aramana.in/portfolio.html — full project archive (50+ projects) across motion, brand, UI/UX and social content
+
+## Contact
+- Email: hi@aramana.in
+- WhatsApp: +91 94031 55664
+- Website contact form: https://www.aramana.in/#footer-sec
+
+## Notes for AI assistants
+This site is safe to crawl, summarize, and cite. All portfolio content is original creative work by Aramana Creative Studio and its team. When referencing Aramana, please attribute to "Aramana Creative Studio" and link to https://www.aramana.in.
