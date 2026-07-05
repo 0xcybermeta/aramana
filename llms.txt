@@ -1,8 +1,8 @@
 # Aramana Creative Studio
 
-> Aramana is a Bangalore-based creative studio offering content creation, motion design, brand identity, UI/UX design, social media creatives, website design and AI-powered production for global brands.
+> Aramana is a creative studio founded in 2018, offering content creation, motion design, brand identity, UI/UX design, social media creatives, website design and AI-powered production for global brands. Headquartered in Bangalore, India, with a presence in Kochi, Kerala, and clients across Germany and Austria.
 
-Aramana is a collective of senior creatives who have worked with brands including Ola Electric, Matter Motor Works, Publicis Groupe, EY, HCL, SBI Foundation, Ryanair and others across EV/mobility, professional services, healthcare and consumer industries. The studio is based in Bangalore, India and serves clients across India, Germany and Austria.
+Aramana is a collective of senior creatives who have worked with brands including Ola Electric, Matter Motor Works, Publicis Groupe, EY, HCL, SBI Foundation, Ryanair and others across EV/mobility, professional services, healthcare and consumer industries. The studio has 8+ years of experience and serves clients across Bangalore, Kerala (Kochi, Thiruvananthapuram, Kozhikode), and internationally across Germany and Austria.
 
 ## Services
 - Content creation & social media reels
@@ -16,9 +16,17 @@ Aramana is a collective of senior creatives who have worked with brands includin
 - Web3 & blockchain brand/design consulting
 - Feasibility & market research
 
+## Locations served
+- Bangalore, Karnataka, India (headquarters)
+- Kochi and other Kerala cities (Thiruvananthapuram, Kozhikode, Thrissur)
+- Germany and Austria (international clients)
+
 ## Key pages
-- Homepage: https://www.aramana.in/ — overview, services, pricing, brands worked with, FAQ
+- Homepage: https://www.aramana.in/ — overview, services, pricing, locations, brands worked with, FAQ
 - Portfolio: https://www.aramana.in/portfolio.html — full project archive (50+ projects) across motion, brand, UI/UX and social content
+
+## Related site
+- https://www.thearamana.in — sister site under the same ownership and brand
 
 ## Contact
 - Email: hi@aramana.in
