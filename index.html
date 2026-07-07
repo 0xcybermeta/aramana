@@ -458,8 +458,10 @@ nav.shrink #navPill:hover .nav-dot{opacity:0;transition:opacity .1s;}
 #pricing{background:var(--bg);padding:clamp(5rem,10vh,8rem) 1.5rem;}
 .pricing-inner{max-width:1080px;margin:0 auto;}
 .pricing-lbl{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem;}
-.pricing-h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4.5vw,3.5rem);color:var(--ink);line-height:1.05;letter-spacing:-.02em;margin-bottom:3rem;}
+.pricing-h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4.5vw,3.5rem);color:var(--ink);line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem;}
 .pricing-h2 em{font-style:italic;color:var(--ink2);}
+.pricing-region-note{font-size:.68rem;color:var(--ink3);line-height:1.7;max-width:640px;margin-bottom:2.5rem;}
+.pricing-region-note b{color:var(--ink2);}
 .srv-list{border-top:1px solid var(--rule);}
 .srv-row{display:grid;grid-template-columns:1fr;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--rule);opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;}
 @media(min-width:640px){.srv-row{grid-template-columns:160px 1fr;gap:2rem;align-items:start;}}
@@ -479,6 +481,27 @@ nav.shrink #navPill:hover .nav-dot{opacity:0;transition:opacity .1s;}
 .t-price{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--ink);line-height:1;}
 .tier.pro .t-price{color:var(--gold);}
 .t-per{font-size:.6rem;color:var(--ink3);margin-bottom:.5rem;}
+.t-intl{font-size:.58rem;color:var(--ink3);letter-spacing:.03em;margin:.4rem 0 .5rem;padding-top:.4rem;border-top:1px dashed var(--rule);transition:opacity .25s;}
+.t-intl b{color:var(--ink2);font-weight:700;}
+.tier.pro .t-intl b{color:rgba(240,169,59,.85);}
+
+/* ── CURRENCY TOGGLE ── */
+.curr-toggle{display:inline-flex;align-items:center;gap:0;background:rgba(253,243,220,.05);border:1px solid var(--rule);border-radius:100px;padding:4px;margin-bottom:2.2rem;}
+.curr-btn{appearance:none;border:none;background:none;font-family:inherit;font-size:.72rem;font-weight:700;letter-spacing:.03em;color:var(--ink3);padding:.55rem 1.3rem;border-radius:100px;cursor:pointer;transition:color .25s,background .25s;white-space:nowrap;}
+.curr-btn:hover{color:var(--ink);}
+.curr-btn.active{background:var(--gold);color:#0e1e3a;}
+.tier{display:flex;flex-direction:column;}
+.tier .t-lbl{order:0;}
+.tier .t-price{order:1;}
+.tier .t-intl{order:1;}
+.tier .t-per{order:2;}
+.tier ul{order:3;}
+#pricing.curr-intl .t-price{display:none;}
+#pricing.curr-intl .t-intl{display:block;border-top:none;padding-top:0;margin-top:0;margin-bottom:0;font-size:1.15rem;font-family:'Instrument Serif',serif;color:var(--ink);}
+#pricing.curr-intl .t-intl b{color:var(--ink);font-weight:400;}
+#pricing.curr-intl .tier.pro .t-intl{color:var(--gold);}
+#pricing.curr-intl .tier.pro .t-intl b{color:var(--gold);}
+#pricing.curr-inr .t-intl{display:none;}
 .tier ul{list-style:none;}
 .tier ul li{font-size:.62rem;color:var(--ink2);padding:2px 0;display:flex;gap:4px;line-height:1.45;}
 .tier.pro ul li{color:rgba(240,169,59,.7);}
@@ -776,25 +799,114 @@ a.fc-val:hover{color:var(--gold);}
 </section>
 
 <!-- ── PRICING ── -->
-<section id="pricing">
+<section id="pricing" class="curr-inr">
   <div class="pricing-inner">
     <p class="pricing-lbl" data-rv>Services & Pricing</p>
     <h2 class="pricing-h2" data-rv="2">Transparent pricing.<br><em>Premium delivery.</em></h2>
-    <div class="srv-list">
-      <div class="srv-row"><div><div class="srv-id">01</div><div class="srv-name">Social Reels</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹35,000</div><div class="t-per">/ month</div><ul><li>4 reels/mo</li><li class="x">No motion graphics</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹85,000</div><div class="t-per">/ month</div><ul><li>8 reels + motion</li><li>Content calendar</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹2,25,000</div><div class="t-per">/ month</div><ul><li>15 reels + AI b-roll</li><li>Strategy & scripting</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">02</div><div class="srv-name">Brand Identity</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹35,000</div><div class="t-per">/ project</div><ul><li>Logo 2 concepts</li><li class="x">No guidelines</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,10,000</div><div class="t-per">/ project</div><ul><li>Logo 3 concepts</li><li>Brand guidelines</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,20,000</div><div class="t-per">/ project</div><ul><li>Animated logo</li><li>Brand video intro</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">03</div><div class="srv-name">UI/UX Design</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹45,000</div><div class="t-per">/ project</div><ul><li>Up to 8 screens</li><li class="x">No design system</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,20,000</div><div class="t-per">/ project</div><ul><li>Up to 20 screens</li><li>Design system</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,20,000</div><div class="t-per">/ project</div><ul><li>Unlimited + prototype</li><li>30 days support</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">04</div><div class="srv-name">Motion Graphics</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹22,000</div><div class="t-per">/ video</div><ul><li>Up to 30 sec</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹65,000</div><div class="t-per">/ video</div><ul><li>Up to 60 sec</li><li>Voiceover sync</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,90,000</div><div class="t-per">/ video</div><ul><li>90 sec + 3D elements</li><li>Sound design</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">05</div><div class="srv-name">Poster Design</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹30,000</div><div class="t-per">/ 10 posters</div><ul><li>Print-ready files</li><li class="x">No source files</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹70,000</div><div class="t-per">/ 10 posters</div><ul><li>Source AI, PSD</li><li>Editable layers</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,50,000</div><div class="t-per">/ 10 posters</div><ul><li>3 concept directions</li><li>Animated versions</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">06</div><div class="srv-name">Website Design</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹60,000</div><div class="t-per">/ site</div><ul><li>Up to 5 pages</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,80,000</div><div class="t-per">/ site</div><ul><li>12 pages + CMS</li><li>SEO-ready</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,50,000</div><div class="t-per">/ site</div><ul><li>Unlimited + e-commerce</li><li>Custom interactions</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">07</div><div class="srv-name">AI Campaign Visuals</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹35,000</div><div class="t-per">/ campaign</div><ul><li>5 final images</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹95,000</div><div class="t-per">/ campaign</div><ul><li>10 images + finishing</li><li>Print + digital</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹2,50,000</div><div class="t-per">/ campaign</div><ul><li>20 images + AI video</li><li>Full source files</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">08</div><div class="srv-name">Pitch Deck</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹18,000</div><div class="t-per">/ deck</div><ul><li>Up to 10 slides</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹50,000</div><div class="t-per">/ deck</div><ul><li>Up to 20 slides</li><li>Animations</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,50,000</div><div class="t-per">/ deck</div><ul><li>Unlimited + AI visuals</li><li>Video slide</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">09</div><div class="srv-name">Web3 & Blockchain</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Consultation</div><div class="t-price">₹25,000</div><div class="t-per">/ session</div><ul><li>2-hr strategy</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,90,000</div><div class="t-per">/ project</div><ul><li>Web3 brand + UX</li><li>Whitepaper design</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹13L–₹30L</div><div class="t-per">based on scope</div><ul><li>Full launch kit</li><li>PR + community</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">10</div><div class="srv-name">Influencer Marketing</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹55,000</div><div class="t-per">/ campaign</div><ul><li>3 micro-influencers</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,90,000</div><div class="t-per">/ campaign</div><ul><li>8–12 influencers</li><li>Performance report</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹5,50,000</div><div class="t-per">/ campaign</div><ul><li>20+ macro + paid</li><li>PR integration</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">11</div><div class="srv-name">Feasibility & Research</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹45,000</div><div class="t-per">/ study</div><ul><li>Market sizing</li><li>Competitor snapshot</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,50,000</div><div class="t-per">/ study</div><ul><li>Deep market analysis</li><li>Financial modelling</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,20,000</div><div class="t-per">/ study</div><ul><li>User interviews</li><li>GTM strategy</li></ul></div></div></div>
-      <div class="srv-row"><div><div class="srv-id">12</div><div class="srv-name">Content Strategy</div></div><div class="tier-row"><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹38,000</div><div class="t-per">/ month</div><ul><li>Calendar + 2 platforms</li><li class="x">No creatives</li></ul></div><div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,20,000</div><div class="t-per">/ month</div><ul><li>3 platforms</li><li>8 creatives + 4 reels</li></ul></div><div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹2,50,000</div><div class="t-per">/ month</div><ul><li>All platforms</li><li>20 creatives + AI b-roll</li></ul></div></div></div>
+    <p class="pricing-region-note" data-rv="3">*₹ = Indian rates. <br>USD = estimated 2026 international agency rates.</p>
+    <div class="curr-toggle" role="group" aria-label="Choose pricing region">
+      <button type="button" class="curr-btn active" id="currInrBtn" onclick="setCurrency('inr')" aria-pressed="true">🇮🇳 India (₹)</button>
+      <button type="button" class="curr-btn" id="currIntlBtn" onclick="setCurrency('intl')" aria-pressed="false">🌍 International ($)</button>
     </div>
-    <p style="font-size:.6rem;color:var(--ink3);margin-top:1.5rem;letter-spacing:.04em;">50% advance · 50% on delivery · Additional revisions ₹2,000 each</p>
+    <div class="srv-list">
+      <div class="srv-row"><div><div class="srv-id">01</div><div class="srv-name">Social Reels</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹35,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$800–$1,500</b></div><ul><li>4 reels/month</li><li>Basic captions & hashtag research</li><li>1 revision round</li><li>Standard-definition delivery</li><li class="x">No motion graphics</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹85,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$2,000–$4,000</b></div><ul><li>8 reels/month + motion graphics</li><li>Full content calendar planning</li><li>Platform-optimized formats (Reels/Shorts/TikTok)</li><li>Trend & hook research included</li><li>2 revision rounds</li><li>Monthly performance snapshot</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹2,25,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$6,000–$10,000</b></div><ul><li>15 reels/month + AI-generated b-roll</li><li>Strategy & scripting included</li><li>Unlimited revisions</li><li>Dedicated content strategist</li><li>Monthly performance report</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">02</div><div class="srv-name">Brand Identity</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹35,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$1,500–$3,000</b></div><ul><li>Logo — 2 concepts</li><li>Basic colour palette</li><li>1 revision round</li><li class="x">No brand guidelines</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,10,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$5,000–$9,000</b></div><ul><li>Logo — 3 concepts</li><li>Full brand guidelines (colour, type, usage)</li><li>Business card & letterhead design</li><li>Social media profile kit</li><li>2 revision rounds</li><li>Editable source files (AI/PSD)</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,20,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$12,000–$20,000</b></div><ul><li>Animated logo + brand video intro</li><li>Complete visual identity system</li><li>Unlimited concepts until approved</li><li>Dedicated brand strategist</li><li>Full source files & ownership rights</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">03</div><div class="srv-name">UI/UX Design</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹45,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$2,500–$4,000</b></div><ul><li>Up to 8 screens</li><li>Wireframes only</li><li>1 revision round</li><li class="x">No design system</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,20,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$7,000–$12,000</b></div><ul><li>Up to 20 screens</li><li>Full design system (components, tokens)</li><li>Interactive prototype</li><li>User flow mapping</li><li>Dev-ready annotated handoff</li><li>2 revision rounds</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,20,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$18,000–$30,000</b></div><ul><li>Unlimited screens</li><li>Prototype + usability testing</li><li>Dev handoff documentation</li><li>Dedicated product designer</li><li>30 days post-launch support</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">04</div><div class="srv-name">Motion Graphics</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹22,000</div><div class="t-per">/ video</div><div class="t-intl"><b>$600–$1,200</b></div><ul><li>Up to 30 sec</li><li>Stock music only</li><li>1 revision round</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹65,000</div><div class="t-per">/ video</div><div class="t-intl"><b>$2,000–$4,000</b></div><ul><li>Up to 60 sec</li><li>Voiceover sync</li><li>Licensed music track</li><li>Custom typography & transitions</li><li>2 revision rounds</li><li>HD delivery, 2 aspect ratios</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,90,000</div><div class="t-per">/ video</div><div class="t-intl"><b>$6,000–$10,000</b></div><ul><li>Up to 90 sec + 3D elements</li><li>Full sound design & mixing</li><li>Unlimited revisions</li><li>4K delivery, multi-aspect exports</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">05</div><div class="srv-name">Poster Design</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹30,000</div><div class="t-per">/ 10 posters</div><div class="t-intl"><b>$1,200–$2,000</b></div><ul><li>Print-ready files</li><li>1 concept direction</li><li class="x">No source files</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹70,000</div><div class="t-per">/ 10 posters</div><div class="t-intl"><b>$2,800–$4,500</b></div><ul><li>Source AI, PSD files</li><li>Editable layers</li><li>2 concept directions</li><li>Print & digital optimized formats</li><li>Basic usage rights included</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,50,000</div><div class="t-per">/ 10 posters</div><div class="t-intl"><b>$6,000–$9,000</b></div><ul><li>3 concept directions</li><li>Animated/motion versions included</li><li>Unlimited revisions</li><li>Dedicated designer</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">06</div><div class="srv-name">Website Design</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹60,000</div><div class="t-per">/ site</div><div class="t-intl"><b>$2,500–$4,000</b></div><ul><li>Up to 5 pages</li><li>Responsive design</li><li>Basic on-page SEO</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,80,000</div><div class="t-per">/ site</div><div class="t-intl"><b>$8,000–$14,000</b></div><ul><li>12 pages + CMS</li><li>SEO-ready structure</li><li>Contact forms & integrations</li><li>Blog/content module included</li><li>Google Analytics setup</li><li>1 month post-launch support</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,50,000</div><div class="t-per">/ site</div><div class="t-intl"><b>$18,000–$30,000</b></div><ul><li>Unlimited pages + e-commerce</li><li>Custom interactions & animations</li><li>Advanced SEO + schema markup</li><li>Dedicated project manager</li><li>3 months post-launch support</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">07</div><div class="srv-name">AI Campaign Visuals</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹35,000</div><div class="t-per">/ campaign</div><div class="t-intl"><b>$1,200–$2,000</b></div><ul><li>5 final images</li><li>Standard resolution</li><li>1 revision round</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹95,000</div><div class="t-per">/ campaign</div><div class="t-intl"><b>$3,500–$5,500</b></div><ul><li>10 images + finishing</li><li>Print + digital ready formats</li><li>Custom style direction</li><li>Brand-consistent prompting</li><li>2 revision rounds</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹2,50,000</div><div class="t-per">/ campaign</div><div class="t-intl"><b>$9,000–$14,000</b></div><ul><li>20 images + AI-generated video</li><li>Full source files</li><li>Unlimited revisions</li><li>Dedicated AI creative lead</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">08</div><div class="srv-name">Pitch Deck</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹18,000</div><div class="t-per">/ deck</div><div class="t-intl"><b>$800–$1,500</b></div><ul><li>Up to 10 slides</li><li>Static design</li><li>1 revision round</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹50,000</div><div class="t-per">/ deck</div><div class="t-intl"><b>$2,200–$3,800</b></div><ul><li>Up to 20 slides</li><li>Subtle animations</li><li>Speaker notes included</li><li>Data visualization design</li><li>2 revision rounds</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,50,000</div><div class="t-per">/ deck</div><div class="t-intl"><b>$6,000–$9,000</b></div><ul><li>Unlimited slides</li><li>AI-generated custom visuals</li><li>One dedicated video slide</li><li>Unlimited revisions</li><li>Presentation coaching call</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">09</div><div class="srv-name">Web3 & Blockchain</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Consultation</div><div class="t-price">₹25,000</div><div class="t-per">/ session</div><div class="t-intl"><b>$600–$1,000</b></div><ul><li>2-hour strategy session</li><li>Written summary</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,90,000</div><div class="t-per">/ project</div><div class="t-intl"><b>$8,000–$13,000</b></div><ul><li>Full Web3 brand + UX</li><li>Whitepaper design</li><li>Tokenomics visual design</li><li>Landing page design included</li><li>Community deck & pitch materials</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹13L–₹30L</div><div class="t-per">based on scope</div><div class="t-intl"><b>$150K–$350K</b></div><ul><li>Full launch kit (brand + site + deck)</li><li>PR + community management</li><li>Dedicated Web3 strategist</li><li>Ongoing advisory retainer</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">10</div><div class="srv-name">Influencer Marketing</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹55,000</div><div class="t-per">/ campaign</div><div class="t-intl"><b>$2,000–$3,500</b></div><ul><li>3 micro-influencers</li><li>Basic campaign brief</li><li>Performance summary</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,90,000</div><div class="t-per">/ campaign</div><div class="t-intl"><b>$8,000–$14,000</b></div><ul><li>8–12 influencers</li><li>Full campaign strategy</li><li>Detailed performance report</li><li>Content usage rights</li><li>Influencer vetting & negotiation</li><li>Creative brief development</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹5,50,000</div><div class="t-per">/ campaign</div><div class="t-intl"><b>$22,000–$35,000</b></div><ul><li>20+ macro influencers + paid amplification</li><li>Full PR integration</li><li>Dedicated campaign manager</li><li>Real-time performance dashboard</li><li>Post-campaign case study</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">11</div><div class="srv-name">Feasibility & Research</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹45,000</div><div class="t-per">/ study</div><div class="t-intl"><b>$2,000–$3,500</b></div><ul><li>Market sizing</li><li>Competitor snapshot</li><li>Summary report</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,50,000</div><div class="t-per">/ study</div><div class="t-intl"><b>$6,500–$10,000</b></div><ul><li>Deep market analysis</li><li>Financial modelling</li><li>Full written report + presentation</li><li>SWOT & risk analysis</li><li>Pricing benchmark research</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹3,20,000</div><div class="t-per">/ study</div><div class="t-intl"><b>$14,000–$20,000</b></div><ul><li>User interviews & primary research</li><li>Full GTM strategy</li><li>Investor-ready deck</li><li>Dedicated research analyst</li><li>Follow-up strategy session</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">12</div><div class="srv-name">Content Strategy</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹38,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$1,500–$2,500</b></div><ul><li>Content calendar</li><li>2 platforms</li><li class="x">No creatives included</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹1,20,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$5,000–$8,000</b></div><ul><li>3 platforms</li><li>8 creatives + 4 reels/month</li><li>Monthly performance review</li><li>Hashtag & SEO keyword research</li><li>Competitor content tracking</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹2,50,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$10,000–$16,000</b></div><ul><li>All platforms</li><li>20 creatives + AI b-roll/month</li><li>Dedicated content strategist</li><li>Weekly performance reporting</li><li>Quarterly strategy refresh</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">13</div><div class="srv-name">Product & Brand Photography</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹25,000</div><div class="t-per">/ shoot</div><div class="t-intl"><b>$1,000–$1,800</b></div><ul><li>10 final images</li><li>Basic colour correction</li><li>1 location</li><li class="x">No retouching</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹65,000</div><div class="t-per">/ shoot</div><div class="t-intl"><b>$2,800–$4,500</b></div><ul><li>25 final images</li><li>Full retouching & colour grading</li><li>Lifestyle + product shots</li><li>Studio + on-location options</li><li>2 revision rounds</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,60,000</div><div class="t-per">/ shoot</div><div class="t-intl"><b>$6,500–$10,000</b></div><ul><li>50+ final images</li><li>Full art direction & styling</li><li>Behind-the-scenes video snippets</li><li>Dedicated photographer + stylist</li><li>Unlimited revisions</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">14</div><div class="srv-name">Podcast Production & Editing</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹8,000</div><div class="t-per">/ episode</div><div class="t-intl"><b>$300–$500</b></div><ul><li>Basic editing & noise removal</li><li>1 platform export</li><li>1 revision round</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹20,000</div><div class="t-per">/ episode</div><div class="t-intl"><b>$800–$1,300</b></div><ul><li>Full editing + intro/outro</li><li>Show notes & timestamps</li><li>Audiogram for social</li><li>2 revision rounds</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹45,000</div><div class="t-per">/ episode</div><div class="t-intl"><b>$1,800–$2,800</b></div><ul><li>Full production + sound design</li><li>Multi-platform video clips</li><li>Distribution to all major platforms</li><li>Dedicated audio engineer</li><li>Unlimited revisions</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">15</div><div class="srv-name">SEO & Digital Marketing</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹25,000</div><div class="t-per">/ audit</div><div class="t-intl"><b>$1,000–$1,800</b></div><ul><li>Technical SEO audit</li><li>Keyword research (10 terms)</li><li>Written recommendations report</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹75,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$3,000–$5,000</b></div><ul><li>Ongoing on-page SEO</li><li>Content optimization (4 pages/mo)</li><li>Monthly ranking report</li><li>Backlink outreach (basic)</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹1,80,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$7,000–$11,000</b></div><ul><li>Full SEO + paid ads management</li><li>Content + technical + off-page SEO</li><li>Weekly performance reporting</li><li>Dedicated SEO strategist</li><li>Competitor tracking & alerts</li></ul></div>
+      </div></div>
+
+      <div class="srv-row"><div><div class="srv-id">16</div><div class="srv-name">Email Marketing Design</div></div><div class="tier-row">
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Standard</div><div class="t-price">₹15,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$600–$1,000</b></div><ul><li>2 email templates/mo</li><li>Basic list segmentation</li><li>1 revision round</li></ul></div>
+        <div class="tier pro lg" style="border-radius:14px;"><div class="t-lbl">Pro</div><div class="t-price">₹40,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$1,800–$3,000</b></div><ul><li>6 email templates/mo</li><li>A/B testing setup</li><li>Automation flow (welcome series)</li><li>Monthly performance report</li></ul></div>
+        <div class="tier lg" style="border-radius:14px;"><div class="t-lbl">Premium ✦</div><div class="t-price">₹90,000</div><div class="t-per">/ month</div><div class="t-intl"><b>$4,000–$6,500</b></div><ul><li>Unlimited templates/mo</li><li>Full lifecycle automation flows</li><li>Advanced segmentation & personalization</li><li>Dedicated email strategist</li><li>Weekly performance reporting</li></ul></div>
+      </div></div>
+
+    </div>
+    <p style="font-size:.6rem;color:var(--ink3);margin-top:1.5rem;letter-spacing:.04em;">50% advance · 50% on delivery · Additional revisions ₹2,000 each · International figures are indicative market benchmarks, not Aramana quotes — actual project pricing is always confirmed via consultation.</p>
   </div>
 </section>
 
@@ -982,6 +1094,25 @@ a.fc-val:hover{color:var(--gold);}
 <script>Tawk_API.onLoad=function(){Tawk_API.hideWidget();};</script>
 
 <script>
+/* ── PRICING CURRENCY TOGGLE ── */
+function setCurrency(mode){
+  var pricing=document.getElementById('pricing');
+  var inrBtn=document.getElementById('currInrBtn');
+  var intlBtn=document.getElementById('currIntlBtn');
+  if(!pricing)return;
+  if(mode==='intl'){
+    pricing.classList.remove('curr-inr');
+    pricing.classList.add('curr-intl');
+    intlBtn.classList.add('active');intlBtn.setAttribute('aria-pressed','true');
+    inrBtn.classList.remove('active');inrBtn.setAttribute('aria-pressed','false');
+  }else{
+    pricing.classList.remove('curr-intl');
+    pricing.classList.add('curr-inr');
+    inrBtn.classList.add('active');inrBtn.setAttribute('aria-pressed','true');
+    intlBtn.classList.remove('active');intlBtn.setAttribute('aria-pressed','false');
+  }
+}
+
 /* ── NAV ── */
 /* lock hero to true visible viewport height (fixes marquee peeking in on fullscreen/mobile) */
 function setVH(){document.documentElement.style.setProperty('--vh',(window.innerHeight*0.01)+'px');}
